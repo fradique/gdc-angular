@@ -1,0 +1,13 @@
+<div class="container">
+  <ul class="list-group">
+    <li *ngFor="let film of films" class="list-group-item">
+      <div class="d-flex justify-content-between">
+        <div>
+          <h4>{{ film.title }}</h4>
+          <p>Episode: {{ film.episode_id }}</p>
+        </div>
+        <img [src]="'https://loremflickr.com/100/100/starwars?lock=' + film.episode_id" alt="" />
+      </div>
+    </li>
+  </ul>
+</div>
