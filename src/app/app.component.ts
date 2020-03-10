@@ -6,11 +6,11 @@ import { Component } from '@angular/core';
   styles: []
 })
 export class AppComponent {
+  showNav=false;
   title = 'Mundo';
-  arreglo=["Uno","Dos","tres"]
+  arreglo = ['Uno', 'Dos', 'tres'];
 
-  add()
-  {
-    this.arreglo.push("cuatro");
+  add() {
+    this.arreglo.push('cuatro');
   }
 }
