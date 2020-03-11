@@ -1,12 +1,18 @@
-<div class="container">
+<div class="container px-0">
   <ul class="list-group">
-    <li *ngFor="let film of films" class="list-group-item">
+    <li *ngFor="let film of films" class="list-group-item pr-0">
       <div class="d-flex justify-content-between">
         <div>
           <h4>{{ film.title }}</h4>
           <p>Episode: {{ film.episode_id }}</p>
+          <p>
+            Planets:
+            <span class="badge badge-primary">
+              {{ film.planets.length }}
+            </span>
+          </p>
         </div>
-        <img [src]="'https://loremflickr.com/100/100/starwars?lock=' + film.episode_id" alt="" />
+        <img class="rounded " [src]="'https://loremflickr.com/100/100/starwars?lock=' + film.episode_id" alt="" />
       </div>
     </li>
   </ul>
