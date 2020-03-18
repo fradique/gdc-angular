@@ -10,6 +10,7 @@
 <br>
 {{name.value|uppercase|reverse}} -->
 <div class="container">
+  <h3>Infectados por pais</h3>
   <ul class="list-group">
     <li *ngFor="let item of data$ | async"
     class="p-0 list-group-item d-flex justify-content-between align-items-start">
@@ -18,8 +19,8 @@
       <div class="badge badge-pill badge-primary">{{ item.infectados }}</div>
       </div>
       <div>
-      <button class="btn btn-primary" (click)="onInfectado(item)">Infectado</button>
-      <button class="btn btn-danger" (click)="onDelete(item)">Delete</button>
+      <button class="btn btn-primary" (click)="onInfectado(item)"><fa-icon [icon]="faPlus"></fa-icon></button>
+      <button class="btn btn-danger" (click)="onDelete(item)"><fa-icon [icon]="faTrashAlt"></fa-icon></button>
       </div>
     </li>
   </ul>

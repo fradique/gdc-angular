@@ -12,6 +12,7 @@ import { Page1Component } from './page1/page1.component';
 import { Page2Component } from './page2/page2.component';
 import { HomeComponent } from './home/home.component';
 import { ReversePipe } from './reverse.pipe';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [AppComponent, Page1Component, Page2Component, HomeComponent, ReversePipe],
@@ -22,7 +23,8 @@ import { ReversePipe } from './reverse.pipe';
     FormsModule,
     ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
