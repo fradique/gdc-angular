@@ -1,1 +1,28 @@
-<p>home works!</p>
+<!-- <form [formGroup]="form" (ngSubmit)="onSubmit()">
+  Name:<input class="form-control" formControlName="name" />
+  <div class="alert alert-danger" *ngIf="name.touched && name.errors?.required" >Campo requerido</div>
+  <div class="alert alert-danger" *ngIf="name.errors?.noValido" >Campo tiene valor invalido</div>
+  Age:<input class="form-control" formControlName="age"/>
+  <button  [disabled]="form.invalid" >Subitm</button>
+</form>
+{{name.value}}
+{{name.value|uppercase}}
+<br>
+{{name.value|uppercase|reverse}} -->
+<div class="container">
+  <ul class="list-group">
+    <li *ngFor="let item of data$ | async"
+    class="p-0 list-group-item d-flex justify-content-between align-items-start">
+    <div>
+      {{ item.pais }}
+      <div class="badge badge-pill badge-primary">{{ item.infectados }}</div>
+      </div>
+      <div>
+      <button class="btn btn-primary" (click)="onInfectado(item)">Infectado</button>
+      <button class="btn btn-danger" (click)="onDelete(item)">Delete</button>
+      </div>
+    </li>
+  </ul>
+  <input type="text" class="form-control" #pais />
+  <button class="btn btn-primary" (click)="onAdd(pais.value)">Add</button>
+</div>
