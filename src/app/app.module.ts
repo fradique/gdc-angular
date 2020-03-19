@@ -15,9 +15,11 @@ import { ReversePipe } from './reverse.pipe';
 import { environment } from './../environments/environment';
 import { ChartsModule } from 'ng2-charts';
 import { BarChartComponent } from './bar-chart/bar-chart.component';
+import { TemplateFormComponent } from './template-form/template-form.component';
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 
 @NgModule({
-  declarations: [AppComponent, Page1Component, Page2Component, HomeComponent, ReversePipe, BarChartComponent],
+  declarations: [AppComponent, Page1Component, Page2Component, HomeComponent, ReversePipe, BarChartComponent, TemplateFormComponent, ReactiveFormComponent],
   imports: [
     BrowserModule,
     FormsModule,

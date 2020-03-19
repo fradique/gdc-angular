@@ -1,3 +1,5 @@
+import { TemplateFormComponent } from './template-form/template-form.component';
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { BarChartComponent } from './bar-chart/bar-chart.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
@@ -10,7 +12,16 @@ const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'page1', component: Page1Component },
   { path: 'page2', component: Page2Component },
-  { path: 'chart', component: BarChartComponent }
+  { path: 'chart', component: BarChartComponent },
+
+  {
+    path: 'forms',
+    children: [
+      { path: '**', redirectTo:'template-forms',pathMatch:'full' },
+      { path: 'template-form', component: TemplateFormComponent },
+      { path: 'reactive-form', component: ReactiveFormComponent },
+    ]
+  }
 ];
 
 @NgModule({

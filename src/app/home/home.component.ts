@@ -18,11 +18,6 @@ export class HomeComponent implements OnInit {
   sub: Subscription;
   collection: AngularFirestoreCollection<Coronavirus>;
 
-  // form = new FormGroup({
-  //   name: new FormControl('', [Validators.required, this.noValido]),
-  //   age: new FormControl(),
-  //   grupo1: new FormGroup({ ejemplo: new FormControl() })
-  // });
   constructor(private db: AngularFirestore) {}
   ngOnInit(): void {
     this.collection = this.db.collection<Coronavirus>('coronavirus');
@@ -40,18 +35,4 @@ export class HomeComponent implements OnInit {
   onDelete(item: Coronavirus) {
     this.collection.doc(item.id).delete();
   }
-
-  // noValido(control: AbstractControl): ValidationErrors | null {
-  //   if (control.value === 'mouse') return { noValido: true };
-  //   return null;
-  // }
-
-  // onSubmit() {
-  //   console.log(this.form.value);
-  //   //this.form.get('')
-  // }
-
-  // get name() {
-  //   return this.form.get('name');
-  // }
 }
