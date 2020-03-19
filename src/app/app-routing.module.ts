@@ -1,3 +1,4 @@
+import { BarChartComponent } from './bar-chart/bar-chart.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
@@ -8,7 +9,8 @@ import { Page2Component } from './page2/page2.component';
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'page1', component: Page1Component },
-  { path: 'page2', component: Page2Component }
+  { path: 'page2', component: Page2Component },
+  { path: 'chart', component: BarChartComponent }
 ];
 
 @NgModule({
