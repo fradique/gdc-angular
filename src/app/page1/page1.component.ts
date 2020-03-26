@@ -1,5 +1,5 @@
+import { FilmsService } from './../films.service';
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 import { SwResponse } from '../Model/swResponse';
 import { SwFilm } from '../Model/swFilm';
 
@@ -11,11 +11,10 @@ import { SwFilm } from '../Model/swFilm';
 export class Page1Component implements OnInit {
   films:SwFilm[];
 
-  constructor(private httpClient:HttpClient) { }
+  constructor(private filmsService:FilmsService) { }
 
   ngOnInit(): void {
-      this.httpClient.get<SwResponse>('https://swapi.co/api/films')
-          .subscribe(r=>this.films=r.results);
+          this.filmsService.getFilms().subscribe(r => (this.films = r));
 
   }
 

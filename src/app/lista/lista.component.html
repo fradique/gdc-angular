@@ -1,0 +1,6 @@
+ Items en la lista:
+    <ul>
+      <li *ngFor="let item of list">
+        {{ item }} <button (click)="onDelete(item)">Delete</button>
+      </li>
+    </ul>

@@ -1,5 +1,30 @@
-<div class="d-flex justify-content-between">
-  <p>parrago 1</p>
-      <img src="https://loremflickr.com/320/240/tulips" alt="">
-   <p>parrago 2</p>
+<div class="container">
+  <div *ngIf="list.length>0; then miTemplateSi else miTemplate"></div>
+</div>
+<button (click)="refresh()">Refresh</button>
+<ng-template #miTemplateSi>
+   <lista [list]="list" (eliminar)="onDelete($event)"></lista>
+</ng-template>
+<ng-template #miTemplate>
+   No hay data
+</ng-template>
+<!--
+<ng-template>
+   Two
+</ng-template> -->
+<br>
+<div *ngIf="valor===1">
+   One
+</div>
+<div *ngIf="valor===2">
+   Two
+</div>
+<div *ngIf="valor===3">
+   Three
+</div>
+
+<div [ngSwitch]="valor">
+   <div *ngSwitchCase="1">One</div>
+   <div *ngSwitchCase="2">Two</div>
+   <div *ngSwitchDefault>No valido</div>
 </div>
