@@ -14,7 +14,7 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
   ]
 })
 export class Page2Component implements OnInit {
-  list = ['Uno', 'Dos', 'Tres'];
+  list = [];
   valor = 4;
 
   constructor() {}
@@ -22,8 +22,16 @@ export class Page2Component implements OnInit {
   ngOnInit(): void {}
 
   refresh() {
-    this.list = ['Uno', 'Dos', 'Tres'];
+
+    let a=2;
+    let b=a+1;
+    
+    this.list = [{id:1,value:'Uno'},{id:2,value: 'Dos'}, {id:1,value:'Tres'}];
   }
+
+
+
+
 
   onDelete(item:string)
   {

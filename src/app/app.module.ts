@@ -19,6 +19,7 @@ import { BarChartComponent } from './bar-chart/bar-chart.component';
 import { TemplateFormComponent } from './template-form/template-form.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { ListaComponent } from './lista/lista.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { ListaComponent } from './lista/lista.component';
     BarChartComponent,
     TemplateFormComponent,
     ReactiveFormComponent,
-    ListaComponent
+    ListaComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
